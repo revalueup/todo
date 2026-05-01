@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 antialiased;
+  }
+
+  input[type='date']::-webkit-calendar-picker-indicator {
+    @apply opacity-50 cursor-pointer;
+    filter: invert(0.5);
+  }
+
+  .dark input[type='date']::-webkit-calendar-picker-indicator {
+    filter: invert(0.8);
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
